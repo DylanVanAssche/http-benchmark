@@ -6,8 +6,11 @@ python:
   - "3.6"
 
 # Python requests isn't found using Pip
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq python-requests    
+before_install:
+  - "pip install -U pip"
+  - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
+        # - sudo apt-get update -qq
+        # - sudo apt-get install -qq python-requests    
 
 # command to install dependencies
 install:
@@ -16,5 +19,5 @@ install:
 script:
   - ./benchmark.py 
 
-virtualenv:
-    system_site_packages: true
+    #virtualenv:
+    #system_site_packages: true
