@@ -11,4 +11,4 @@ install:
   
 # test benchmark.py
 script:
-  - ./benchmark.py https://graph.irail.be/sncb/connections -n 10 -i -o results.csv
+  - python3 benchmark.py https://graph.irail.be/sncb/connections -n 10 -i -o results.csv
