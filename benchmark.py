@@ -91,8 +91,12 @@ def main():
     parser.add_argument("-o", "--output", type=str, help="Export results to a given file in CSV format.")
     args = parser.parse_args()
     showIndividualResults = args.individual
-    exportAsCSV = len(args.output) > 0
-    csvFileName = args.output
+    exportAsCSV = False
+    csvFileName = ""
+    if args.output is not None:
+        exportAsCSV = True
+        csvFileName = args.output
+    
     numberOfRequests = args.numberOfRequests
     url = args.url
     generateHeader("OPTIONS")
