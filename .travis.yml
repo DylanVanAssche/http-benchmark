@@ -5,7 +5,16 @@ python:
   - "3.5"
   - "3.6"
 
+# Python requests isn't found using Pip
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq python-requests    
+
 # command to install dependencies
-script:
+install:
   - pip3 install -r requirements.txt
+  
+script:
   - ./benchmark.py 
+
+virtualenv:
+    system_site_packages: true
