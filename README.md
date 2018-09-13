@@ -1,4 +1,6 @@
 # http-benchmark
+[![Build Status](https://travis-ci.com/DylanVanAssche/http-benchmark.svg?branch=master)](https://travis-ci.com/DylanVanAssche/http-benchmark)
+
 A simple HTTP response time benchmark in Python 3.
 
 ## Features
